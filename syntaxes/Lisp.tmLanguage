@@ -230,6 +230,38 @@
 			<string>constant.numeric.lisp</string>
 		</dict>
 
+		<!-- ================= Quote / Reader Macros ================= -->
+		<!-- Single quote (') - quote macro reader syntax -->
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.quote.lisp</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>(?&lt;=^|\s|[()\[\]{}])(\')(?=\S)</string>
+			<key>name</key>
+			<string>meta.expression.quote.lisp</string>
+		</dict>
+		<!-- Backtick (`) - quasiquote reader syntax -->
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.quasiquote.lisp</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>(?&lt;=^|\s|[()\[\]{}])(`)(?=\S)</string>
+			<key>name</key>
+			<string>meta.expression.quasiquote.lisp</string>
+		</dict>
+
 		<!-- ================= Strings ================= -->
 		<!-- Double-quoted strings with escapes -->
 		<dict>
@@ -264,65 +296,6 @@
 					<string>constant.character.escape.lisp</string>
 				</dict>
 			</array>
-		</dict>
-		<!-- Single-quoted strings (DSL mode), allow escapes -->
-		<dict>
-			<key>begin</key>
-			<string>'</string>
-			<key>beginCaptures</key>
-			<dict>
-				<key>0</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.string.begin.lisp</string>
-				</dict>
-			</dict>
-			<key>end</key>
-			<string>'</string>
-			<key>endCaptures</key>
-			<dict>
-				<key>0</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.string.end.lisp</string>
-				</dict>
-			</dict>
-			<key>name</key>
-			<string>string.quoted.single.lisp</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>match</key>
-					<string>\\.</string>
-					<key>name</key>
-					<string>constant.character.escape.lisp</string>
-				</dict>
-			</array>
-		</dict>
-		<!-- Backtick-quoted (inline code or quasiquote-like) -->
-		<dict>
-			<key>begin</key>
-			<string>`</string>
-			<key>beginCaptures</key>
-			<dict>
-				<key>0</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.string.begin.lisp</string>
-				</dict>
-			</dict>
-			<key>end</key>
-			<string>`</string>
-			<key>endCaptures</key>
-			<dict>
-				<key>0</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.string.end.lisp</string>
-				</dict>
-			</dict>
-			<key>name</key>
-			<string>string.quoted.other.backtick.lisp</string>
 		</dict>
 
 		<!-- ================= Identifiers (Capitalized vs lowercase) ================= -->

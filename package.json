@@ -1,6 +1,6 @@
 {
   "name": "LispSxpr",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "publisher": "Yasuo-Higano",
   "description": "Lisp syntax highlight",
   "author": {
@@ -12,7 +12,7 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/mattn/vscode-lisp"
+    "url": "https://github.com/Yasuo-Higano/vscode-lisp-sxpr-highlighting"
   },
   "dependencies": {},
   "devDependencies": {
@@ -46,6 +46,6 @@
   },
   "readmeFilename": "README.md",
   "bugs": {
-    "url": "https://github.com/mattn/vscode-lisp/issues"
+    "url": "https://github.com/Yasuo-Higano/vscode-lisp-sxpr-highlighting/issues"
   }
 }
